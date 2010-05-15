@@ -1,0 +1,13 @@
+# conkyrc file for dzen
+###
+
+background no
+out_to_console yes
+out_to_x no
+update_interval 1
+total_run_times 0
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+^i(/home/greg/.xmonad/xbm8x8/note.xbm) [ ^fg(\#909090)${mpd_status}^fg() ${if_mpd_playing}- ^fg(\#909090)${mpd_elapsed}^fg()/^fg(\#909090)${mpd_length}^fg()$endif ] ^fg(\#909090)${mpd_title}^fg() - ^fg(\#909090)${mpd_artist}^fg() ^i(/home/greg/.xmonad/xbm8x8/cpu.xbm) ^fg(\#909090)${cpu}%^fg()  ^i(/home/greg/.xmonad/xbm8x8/mem.xbm) ^fg(\#909090)${memperc}%^fg()  ^i(/home/greg/.xmonad/xbm8x8/net_down_01.xbm) ^fg(\#909090)${downspeedf eth0} ^i(/home/greg/.xmonad/xbm8x8/net_up_01.xbm) ${upspeedf eth0}^fg()  ^i(/home/greg/.xmonad/xbm8x8/clock.xbm) ${time %a %b %d %H:%M:%S}  

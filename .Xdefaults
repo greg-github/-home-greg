@@ -1,0 +1,71 @@
+! Cursor theme
+!Xcursor.theme: Obsidian
+Xcursor.theme: CG
+
+! Colors
+!#include "/home/greg/.xcolors/zenburn.xcolors"
+!#include "/home/greg/.xcolors/pvenma.xcolors"
+#include "/home/greg/.xcolors/bright"
+
+! Fonts {{{
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+
+! }}}
+
+! Urxvt {{{
+URxvt*font:     xft:Terminus:pixelsize=14:antialias=false
+URxvt*boldFont: xft:Terminus:bold:pixelsize=14:antialias=false
+
+URxvt*scrollBar:  false
+URxvt*jumpScroll: true
+URxvt*skipScroll: true
+URxvt*visualBell: false
+
+URxvt*depth:       32
+URxvt*buffered:    true
+URxvt*foreground:  #dcdccc
+URxvt*background:  rgba:0000/0000/0000/3333
+URxvt*transparent: true
+URxvt*fading:      0%
+URxvt*fadeColor:   grey
+urxvt*tintColor: black
+URxvt*shading:     75
+
+URxvt*intensityStyles: true
+URxvt*termName:        rxvt-256color
+URxvt*urgentOnBell:    true
+
+! URLs in rxvt
+URxvt*perl-ext-common: matcher
+URxvt*urlLauncher:     browser
+!URxvt*urlLauncher:     chromium
+URxvt*matcher.button:  1
+URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@URxvt-]*[\\w/-]
+
+! }}}
+
+! Xterm {{{
+xterm*Geometry:   100x60
+xterm*foreground: #303030
+xterm*background: #303030
+xterm*font:       -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+xterm*boldFont:   -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+xterm*scrollBar:  false
+xterm*termName:   xterm-256color
+
+! }}}
+
+! Xmessage {{{
+Xmessage*font:                  -xos4-terminus-*-*-*-*-*-*-*-*-*-*-iso8859-2
+Xmessage*background:            #303030
+Xmessage*foreground:            #909090
+Xmessage*form.*.shapeStyle:     rectangle
+Xmessage*Scrollbar.width:       0
+Xmessage*Scrollbar.borderWidth: 0
+Xmessage*Buttons:               Quit
+Xmessage*defaultButton:         Quit
+
+! }}}

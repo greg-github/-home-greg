@@ -1,0 +1,1 @@
+fromList [("Run or Raise: ",["emacsclient -c","emacsclient -c","emacsclient -c","emacsclient -c","emacsclient -c","emacsclient -w","google-chrome","claws-mail","midori","emacsclient","emacsc","claws-mail"]),("Run: ",["","uzbl-browser","zeppelin","zep"])]

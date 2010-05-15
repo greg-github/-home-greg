@@ -1,0 +1,4 @@
+#!/bin/sh
+
+DMENU="ls /usr/bin|dmenu"
+$DMENU

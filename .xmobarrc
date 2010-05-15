@@ -1,0 +1,17 @@
+Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Cpu ["-L","15","-H","50","--normal","aquamarine2","--high","chocolate1"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+    		    , Run Date "%a %b %_d %Y" "date" 360
+		    , Run Date "%H:%M:%S" "time" 1
+		    , Run StdinReader
+		    , Run CpuFreq ["-t","<cpu0>Ghz"] 10
+		    , Run Com "sh" ["~/.xmonad/mpd.sh"] "mpd" 10 
+		    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ <fc=#23FF95>%mpd%</fc> <fc=#00A0FF>%cpu% %memory% %date% %time%</fc>"
+       }
