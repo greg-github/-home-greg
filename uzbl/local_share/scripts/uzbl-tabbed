@@ -517,7 +517,8 @@ class UzblInstance:
                 self.parent.clean_slate()
             elif type == "EXIT_ALL_TABS":
                 self.parent.quitrequest()
-
+            elif type == "GREG_TEST":
+                self.parent.list_tabs()
 
     def close(self):
         '''The remote instance exited'''
@@ -1242,8 +1243,18 @@ class UzblTabbed:
             self.tablist.set_markup(pango)
 
         return True
-
-
+    
+    def list_tabs(self):
+        os.system('rm /tmp/uzbl_list_tabs')
+        os.system('touch /tmp/uzbl_list_tabs')
+        for index, tab in enumerate(self.notebook):
+            thenum = str(index)
+            uzbl = self.tabs[tab]
+            os.system('echo "'+thenum+' '+uzbl.title+'" >> /tmp/uzbl_list_tabs')
+        ret = os.popen('cat /tmp/test|dmenu').read()
+        self.goto_tab(int(ret[:1]))
+        return True
+    
     def save_session(self, session_file=None):
         '''Save the current session to file for restoration on next load.'''
 
