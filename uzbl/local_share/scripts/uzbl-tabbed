@@ -1251,9 +1251,12 @@ class UzblTabbed:
             thenum = str(index)
             uzbl = self.tabs[tab]
             os.system('echo "'+thenum+' '+uzbl.title+'" >> /tmp/uzbl_list_tabs')
-        ret = os.popen('cat /tmp/test|dmenu').read()
-        self.goto_tab(int(ret[:1]))
-        return True
+        ret = os.popen('cat /tmp/uzbl_list_tabs|dmenu').read()
+        if (ret[:1].isdigit()):
+            self.goto_tab(int(ret[:1]))
+            return True
+        else:
+            return False
     
     def save_session(self, session_file=None):
         '''Save the current session to file for restoration on next load.'''
